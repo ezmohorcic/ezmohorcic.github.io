@@ -7,11 +7,7 @@ export default function App()
 {
   return(
     <Provider store={store}>
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<h1>owo App!</h1>}/>   
-        </Routes>
-      </BrowserRouter>
+      <h1>owo App!</h1>
     </Provider>
   )
 }
