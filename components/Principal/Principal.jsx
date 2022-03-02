@@ -10,16 +10,16 @@ export default function Principal()
             <h2 id='principalTitulo'>Desarrolladora Web - Full Stack</h2>
 
             <div className="principalContLinksExternos">
-                <a href="" className="principalLinksExternos">Linked-In</a>
+                <a href="linkedin.com/in/ivanna-mohorcic-94b96420a" className="principalLinksExternos">Linked-In</a>
             </div>
 
             <div className="principalContLinksExternos">
-                <a href="" className="principalLinksExternos">GitHub</a>
+                <a href="github.com/ezmohorcic" className="principalLinksExternos">GitHub</a>
             </div>
 
-            <div className="principalContLinksExternos">
+            {/* <div className="principalContLinksExternos">
                 <Link></Link>
-            </div>
+            </div> */}
         </div>
     )
 }
