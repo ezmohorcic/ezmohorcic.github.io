@@ -11,7 +11,7 @@ export default function App()
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/index.html" element={<><Principal/><Projects/></>}/>   
+          <Route path="/" element={<><Principal/><Projects/></>}/>   
         </Routes>
       </BrowserRouter>
     </Provider>
