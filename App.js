@@ -3,7 +3,9 @@ import { Provider } from 'react-redux';
 import store from './redux/store.js'
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Principal from './components/Principal/Principal.jsx';
-import Projects from './components/Projects/Projects.jsx'
+import Projects from './components/Projects/Projects.jsx';
+
+import "./App.css"
 
 export default function App()
 {
