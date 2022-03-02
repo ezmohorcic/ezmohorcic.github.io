@@ -1,0 +1,26 @@
+#principalContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 98vw;
+    height: 100vh;
+    max-width: 100%;
+    
+}
+
+#principalCardShell{
+    width: fit-content;
+    font-size: 2vw;
+}
+#principalNameCont,#principalTituloCont{
+    height: 8vh;
+    text-align: center;
+    font-size: 1.1em;
+}
+#principalTituloCont{
+    height: 7vh;
+    font-size: 0.8em;
+    text-align: left;
+}
