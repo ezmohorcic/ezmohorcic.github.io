@@ -18,9 +18,40 @@
     height: 8vh;
     text-align: center;
     font-size: 1.1em;
+    color: white;
 }
 #principalTituloCont{
-    height: 7vh;
+    height: 5vh;
+    margin-bottom: 4vh;
+    margin-top: 3vh;
+
     font-size: 0.8em;
     text-align: left;
+    font-style: italic;
+    color: lightgray;
+}
+#principalTitulo{
+    margin: 0;
+    
+}
+
+#linksPrincipalCont{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9em;
+
+}
+
+.principalShellExternos{
+    border: 0.2vw solid white;
+    border-radius: 0.3vw;
+    padding: 0.5vw;
+}
+
+.principalDerechaLink{
+    margin-left: 0.5vw;
+}
+.principalLinksExternos{
+    text-decoration: none;
+    color: white;
 }
