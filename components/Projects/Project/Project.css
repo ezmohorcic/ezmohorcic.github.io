@@ -1,0 +1,60 @@
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50vw;
+    height: auto;
+    padding-top:5vh;
+    padding-bottom: 5vh;
+}
+
+.projectTitle{
+   margin: 0; 
+   margin-bottom: 3vh;
+}
+
+.projectImg{
+    display: block;
+    width: 40vw;
+    height: auto;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+}
+
+.projectAllCont{
+    width: 40vw;
+    height: auto;
+
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+
+    text-align: center;
+    font-size: 2vw;
+}
+
+.projectInfoCont>p{
+    margin: 1vw;
+    height: auto;
+    font-size: 0.6em;
+}
+
+.projectButsCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    height: 3.8vw;
+    margin-top: 2vh;
+}
+.projectLinkCont{
+    border-radius: 0.3vw;
+    padding: 0.5vw;
+}
+.projectLink{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+}
