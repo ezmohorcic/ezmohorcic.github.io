@@ -11,11 +11,7 @@ export default function App()
 {
   return(
     <Provider store={store}>
-      <BrowserRouter>
-        <Routes>
-          <Route  path="/index.html" element={<><Principal/><Projects/></>}/>   
-        </Routes>
-      </BrowserRouter>
+      <Principal/><Projects/>
     </Provider>
   )
 }
