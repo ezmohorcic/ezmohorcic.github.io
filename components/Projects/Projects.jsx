@@ -1,9 +1,10 @@
 import React from 'react';
 import Project from './Project/Project.jsx';
+import { motion, Variants } from 'framer-motion';
 
 import { info_SecretH } from './Info.js';
-
 import './Projects.css'
+
 
 export default function Projects()
 {

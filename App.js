@@ -13,7 +13,7 @@ export default function App()
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<><Principal/><Projects/></>}/>   
+          <Route  path="/" element={<><Principal/><Projects/></>}/>   
         </Routes>
       </BrowserRouter>
     </Provider>

@@ -13,6 +13,7 @@
 .projectTitle{
    margin: 0; 
    margin-bottom: 3vh;
+   color: white;
 }
 
 .projectImg{
@@ -38,6 +39,7 @@
     margin: 1vw;
     height: auto;
     font-size: 0.6em;
+    color: white;
 }
 
 .projectButsCont{
@@ -51,6 +53,7 @@
 .projectLinkCont{
     border-radius: 0.3vw;
     padding: 0.5vw;
+    border: 0.2vw solid white;
 }
 .projectLink{
     text-align: center;
