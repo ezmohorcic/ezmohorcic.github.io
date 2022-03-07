@@ -1,13 +1,23 @@
 #projectsContainer{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     width: 76vw;
+    height: fit-content;
     margin: auto;
 
     font-size: 2vw;
+
+    background-color: black;
+    z-index: 1;
+}
+#projectTitleCont{
+    width: 50vw;
+    height: 20vh;
+    background-color: black;
 
     z-index: 1;
 }
@@ -17,6 +27,5 @@
     margin-top: 5vh;
     margin-bottom: 10vh;
     color: white;
-
-    z-index: 1;
+    background-color: black;
 }

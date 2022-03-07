@@ -17,32 +17,44 @@ function handleScroll()
 export default function App()
 {
 
-  let scroll=0;
+  /*let scroll=0;
   useEffect(() => {
     function updatePosition() {
-        if(scroll==0 && window.scrollY!=0) 
+      // console.log(scroll,window.scrollY)
+        if(scroll==0 && window.scrollY>0) 
         {
+          console.log("scroll==0 && window.scrollY>0")
           window.scrollTo(0,document.documentElement.clientHeight)
           scroll=document.documentElement.clientHeight;
         }
+        else if(scroll==document.documentElement.clientHeight && window.scrollY>scroll)
+        {
+          console.log("scroll==document.documentElement.clientHeight && window.scrollY>scroll")
+          window.scrollTo(0,document.documentElement.clientHeight*(2/10)+scroll)
+          scroll= document.documentElement.clientHeight*(2/10)+scroll
+        }
+        else if(scroll==document.documentElement.clientHeight && window.scrollY<scroll)
+        {
+          console.log("scroll==document.documentElement.clientHeight && window.scrollY<scroll")
+          window.scrollTo(0,0)
+          scroll= 0;
+        }
         else{scroll=window.scrollY}
-        
     }
 
     window.addEventListener('scroll', updatePosition)
     updatePosition()
 
     return () => window.removeEventListener('scroll', updatePosition)
-   }, [])
+   }, [])*/
   //console.log(document.documentElement.clientHeight)
   return(
     <Provider store={store}>
-      <div >
+      <div id='appAll'>
         <div id='principalApp'>
           <BackgroundPrincipal/>
           <Principal/>
         </div>
-        
         <Projects/>
       </div>      
     </Provider>

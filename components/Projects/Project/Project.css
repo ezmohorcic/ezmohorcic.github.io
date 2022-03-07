@@ -9,7 +9,9 @@
     padding-top:5vh;
     padding-bottom: 5vh;
 
-    z-index: 2;
+    background-color: black;
+
+    z-index: 1;
 }
 
 .projectTitle{
