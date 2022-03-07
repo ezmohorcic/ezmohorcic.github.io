@@ -8,6 +8,8 @@
     height: auto;
     padding-top:5vh;
     padding-bottom: 5vh;
+
+    z-index: 2;
 }
 
 .projectTitle{

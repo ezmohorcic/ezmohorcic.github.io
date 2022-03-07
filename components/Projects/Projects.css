@@ -8,6 +8,8 @@
     margin: auto;
 
     font-size: 2vw;
+
+    z-index: 1;
 }
 #projectsTitle{
     text-align: center;
@@ -15,4 +17,6 @@
     margin-top: 5vh;
     margin-bottom: 10vh;
     color: white;
+
+    z-index: 1;
 }

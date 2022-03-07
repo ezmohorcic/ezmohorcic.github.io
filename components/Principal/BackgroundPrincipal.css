@@ -4,12 +4,14 @@
     justify-content: center;
     align-items: center;
 
-    width: 97vw;
+    width: 97.44vw;
     height: 100vh;
     margin: auto;
 
     grid-column: 1/2;
     grid-row: 1/2;
+
+    z-index: 0;
 }
 
 .HourLineCenter{
@@ -23,41 +25,9 @@
 .HourLine{
     position:absolute;
     margin: auto;
-    width: 10vw;
+    width: 1300px;
     height: 0.3vw;
-    background-color: white;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 14%, rgba(55,55,146,0) 15%, rgba(9,9,121,0) 85%, rgba(255,255,255,1) 86%);
 }
 
 
-#deg0{
-    transform: rotate(0deg) translate(25vw);
-    offset-rotate: auto;
-    offset-path: circle(15vw at 50vw 50vh);
-    animation: move 4s linear infinite;
-}
-@keyframes move {
-    100% {
-      offset-distance: 100%;
-    }
-}
-#deg45{
-    transform: rotate(45deg) translate(25vw);
-}
-#deg90{
-    transform: rotate(90deg) translate(25vw);
-}
-#deg135{
-    transform: rotate(135deg) translate(25vw);
-}
-#deg180{
-    transform: rotate(180deg) translate(25vw);
-}
-#deg225{
-    transform: rotate(225deg) translate(25vw);
-}
-#deg270{
-    transform: rotate(270deg) translate(25vw);
-}
-#deg315{
-    transform: rotate(315deg) translate(25vw);
-}
