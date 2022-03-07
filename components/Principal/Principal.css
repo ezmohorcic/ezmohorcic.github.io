@@ -7,9 +7,13 @@
     width: 98vw;
     height: 100vh;
     max-width: 100%;
+
+    grid-column: 1/2;
+    grid-row: 1/2;
     
 }
 
+/* Carta principal */
 #principalCardShell{
     width: fit-content;
     padding: 2vh 2vw 4vh 2vw;
@@ -20,7 +24,9 @@
     border-radius: 1.5vw;
 
     box-shadow: inset 0 0 1.1vw 0.2vw white;
+    background-color: rgba(30, 30, 30, 0.4);
     clip-path: inset(1vw 0 1vw 0);
+    
 }
 #principalNameCont,#principalTituloCont{
     height: 8vh;  
@@ -66,7 +72,10 @@
     text-decoration: none;
     color: white;
 }
+/* Carta principal */
 
+
+/* Decorado costados */
 .contDecoLineas{
     display: flex;
     flex-direction: row;
@@ -87,3 +96,4 @@
     height: 0.2vh;
     background-color: white;
 }
+/* Decorado costados */

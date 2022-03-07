@@ -11,14 +11,24 @@ const CShellVariants=
 const pVariants=
 {
     offScreen:{opacity:0,transition:{duration:1,delay:1}},
-    onScreen:{opacity:1,transition:{duration:1,delay:1}}
+    onScreen:{opacity:1,transition:{duration:1,delay:1}},
+}
+const butHover=
+{
+    boxShadow: "inset 0 0 1.1vw 0.2vw #D4AF37",
+    clipPath: "inset(1vw 0 1vw 0)",
+    borderColor:"#D4AF37",
+    color:"#D4AF37",
+    transition:{duration:0.2}
 }
 
+const aHover={color:"#D4AF37"}
 
 export default function Principal()
 {
     return(
         <div id="principalContainer" >
+            
             <motion.div viewport={{once:true}} variants={CShellVariants} initial={"offScreen"} whileInView={"onScreen"} className='contDecoLineas'>
                 <div className='circuloDeco'></div>
                 <div className='LineaDeco'></div>
@@ -30,11 +40,11 @@ export default function Principal()
                 </div>
                 <div id="principalTituloCont"><motion.h2 viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} id='principalTitulo'>Desarrolladora Web - Full Stack</motion.h2></div>
                 <div id='linksPrincipalCont'>
-                    <motion.div viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} className="principalShellExternos">
-                        <a  target={"_blank"} href="https://linkedin.com/in/ivanna-mohorcic-94b96420a" className="principalLinksExternos">Linked-In</a>
+                    <motion.div whileHover={butHover} viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} className="principalShellExternos">
+                        <motion.a whileHover={aHover} target={"_blank"} href="https://linkedin.com/in/ivanna-mohorcic-94b96420a" className="principalLinksExternos">Linked-In</motion.a>
                     </motion.div>
-                    <motion.div viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} className="principalShellExternos principalDerechaLink">
-                        <a  target={"_blank"} href="https://github.com/ezmohorcic" className="principalLinksExternos">GitHub</a>
+                    <motion.div whileHover={butHover} viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} className="principalShellExternos principalDerechaLink">
+                        <motion.a whileHover={aHover} target={"_blank"} href="https://github.com/ezmohorcic" className="principalLinksExternos">GitHub</motion.a>
                     </motion.div>
                 </div>
             </motion.div>

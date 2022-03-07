@@ -6,6 +6,7 @@ import Principal from './components/Principal/Principal.jsx';
 import Projects from './components/Projects/Projects.jsx';
 
 import "./App.css"
+import BackgroundPrincipal from './components/Principal/BackgroundPrincipal.jsx';
 
 function handleScroll()
 {
@@ -16,12 +17,9 @@ function handleScroll()
 export default function App()
 {
 
- const [scrollPosition, setPosition] = useState({ scrollX: 0, scrollY: 0 })
   let scroll=0;
   useEffect(() => {
     function updatePosition() {
-        setPosition({ scrollX: window.scrollX, scrollY: window.scrollY })
-        console.log(window.scrollY,scroll)
         if(scroll==0 && window.scrollY!=0) 
         {
           window.scrollTo(0,document.documentElement.clientHeight)
@@ -40,7 +38,12 @@ export default function App()
   return(
     <Provider store={store}>
       <div >
-        <Principal /><Projects/>
+        <div id='principalApp'>
+          <BackgroundPrincipal/>
+          <Principal/>
+        </div>
+        
+        <Projects/>
       </div>      
     </Provider>
   )

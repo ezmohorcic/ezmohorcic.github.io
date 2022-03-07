@@ -1,0 +1,63 @@
+#contBackgroundPrincipal
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 97vw;
+    height: 100vh;
+    margin: auto;
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.HourLineCenter{
+    position: absolute;
+    width: 10vw;
+    height: 0.3vh;
+    background-color: red;
+    margin: auto;
+}
+
+.HourLine{
+    position:absolute;
+    margin: auto;
+    width: 10vw;
+    height: 0.3vw;
+    background-color: white;
+}
+
+
+#deg0{
+    transform: rotate(0deg) translate(25vw);
+    offset-rotate: auto;
+    offset-path: circle(15vw at 50vw 50vh);
+    animation: move 4s linear infinite;
+}
+@keyframes move {
+    100% {
+      offset-distance: 100%;
+    }
+}
+#deg45{
+    transform: rotate(45deg) translate(25vw);
+}
+#deg90{
+    transform: rotate(90deg) translate(25vw);
+}
+#deg135{
+    transform: rotate(135deg) translate(25vw);
+}
+#deg180{
+    transform: rotate(180deg) translate(25vw);
+}
+#deg225{
+    transform: rotate(225deg) translate(25vw);
+}
+#deg270{
+    transform: rotate(270deg) translate(25vw);
+}
+#deg315{
+    transform: rotate(315deg) translate(25vw);
+}
