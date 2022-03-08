@@ -16,41 +16,27 @@ function handleScroll()
 
 export default function App()
 {
-
-  /*let scroll=0;
-  useEffect(() => {
-    function updatePosition() {
-      // console.log(scroll,window.scrollY)
-        if(scroll==0 && window.scrollY>0) 
-        {
-          console.log("scroll==0 && window.scrollY>0")
-          window.scrollTo(0,document.documentElement.clientHeight)
-          scroll=document.documentElement.clientHeight;
-        }
-        else if(scroll==document.documentElement.clientHeight && window.scrollY>scroll)
-        {
-          console.log("scroll==document.documentElement.clientHeight && window.scrollY>scroll")
-          window.scrollTo(0,document.documentElement.clientHeight*(2/10)+scroll)
-          scroll= document.documentElement.clientHeight*(2/10)+scroll
-        }
-        else if(scroll==document.documentElement.clientHeight && window.scrollY<scroll)
-        {
-          console.log("scroll==document.documentElement.clientHeight && window.scrollY<scroll")
-          window.scrollTo(0,0)
-          scroll= 0;
-        }
-        else{scroll=window.scrollY}
+  const [scroll,setScroll]=useState(0);
+  function handleScroll(e)
+  {
+    let raw=0;
+    if(scroll==0)
+    {
+      raw=document.documentElement.clientHeight;
+      window.scrollTo(0,raw) 
+    } 
+    else if(scroll==document.documentElement.clientHeight)
+    {
+      raw=document.documentElement.clientHeight*(1.2)
+      window.scrollTo(0,raw)
+      
     }
-
-    window.addEventListener('scroll', updatePosition)
-    updatePosition()
-
-    return () => window.removeEventListener('scroll', updatePosition)
-   }, [])*/
-  //console.log(document.documentElement.clientHeight)
+    setScroll(e)
+  }
+  console.log(scroll)
   return(
     <Provider store={store}>
-      <div id='appAll'>
+      <div id='appAll' onWheel={(e)=>handleScroll(e)}>
         <div id='principalApp'>
           <BackgroundPrincipal/>
           <Principal/>
