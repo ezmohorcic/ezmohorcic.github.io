@@ -22,18 +22,52 @@ export default function App()
     let raw=0;
     if(scroll==0)
     {
-      raw=document.documentElement.clientHeight;
-      window.scrollTo(0,raw) 
+      if(e.deltaY>0)
+      {
+        raw=document.documentElement.clientHeight*(0.2);
+        window.scrollTo(0,raw) 
+      }
     } 
-    else if(scroll==document.documentElement.clientHeight)
+    else if(scroll==document.documentElement.clientHeight*(0.2))
     {
-      raw=document.documentElement.clientHeight*(1.2)
-      window.scrollTo(0,raw)
-      
+      console.log(e.deltaY>0)
+      if(e.deltaY>0)
+      {
+        raw=document.documentElement.clientHeight*(1.2)
+        window.scrollTo(0,raw)
+      }
+      else
+      {
+        raw=0;
+        window.scrollTo(0,raw);
+      }
     }
-    setScroll(e)
+    else
+    {
+      console.log(e.deltaY>0)
+      if(e.deltaY>0)
+      {
+        raw=scroll + document.documentElement.clientHeight;
+        window.scrollTo(0,raw);
+      }
+      else
+      {
+        if(scroll==document.documentElement.clientHeight*(1.2))
+        {
+          raw=0;
+          window.scrollTo(0,raw);
+        }
+        else
+        {
+          raw = scroll - document.documentElement.clientHeight;
+          window.scrollTo(0,raw)
+        }
+      }
+    }
+    setScroll(raw)
+    console.log(scroll,e.deltaY,raw)
   }
-  console.log(scroll)
+  
   return(
     <Provider store={store}>
       <div id='appAll' onWheel={(e)=>handleScroll(e)}>
