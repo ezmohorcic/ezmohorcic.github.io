@@ -50,6 +50,9 @@ export default function Principal()
                     <motion.div whileHover={butHover} viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} className="principalShellExternos principalDerechaLink">
                         <motion.a onMouseOver={()=>dispatch(PrincipalLinkHover())} onMouseLeave={()=>dispatch(PrincipalLinkHover())} whileHover={aHover} target={"_blank"} href="https://github.com/ezmohorcic" className="principalLinksExternos">GitHub</motion.a>
                     </motion.div>
+                    <motion.div whileHover={butHover} viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} className="principalShellExternos principalDerechaLink">
+                        <motion.a onMouseOver={()=>dispatch(PrincipalLinkHover())} onMouseLeave={()=>dispatch(PrincipalLinkHover())} whileHover={aHover} target={"_blank"} href="https://ezmohorcic.github.io/Ivanna_Mohorcic_Resume.pdf" className="principalLinksExternos">CV</motion.a>
+                    </motion.div>
                 </div>
             </motion.div>
 
