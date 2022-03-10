@@ -11,13 +11,72 @@
     grid-row: 1/2;
 }
 
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotating45 {
+    from{
+        transform: rotate(45deg);
+    }
+    to{
+        transform: rotate(405deg);
+    }
+}
+@keyframes rotating90 {
+    from{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(450deg);
+    }
+}
+@keyframes rotating135 {
+    from{
+        transform: rotate(135deg);
+    }
+    to{
+        transform: rotate(495deg);
+    }
+}
+
+#test0{
+    animation: rotating 14s linear infinite;
+}
+
+#test45{
+    animation: rotating45 14s linear infinite;
+}
+#test90{
+    animation: rotating90 14s linear infinite;
+}
+#test135{
+    animation: rotating135 14s linear infinite;
+}
+
+#fast0{
+    animation: rotating 4s linear infinite;
+}
+
+#fast45{
+    animation: rotating45 4s linear infinite;
+}
+#fast90{
+    animation: rotating90 4s linear infinite;
+}
+#fast135{
+    animation: rotating135 4s linear infinite;
+}
+
 .HourLineCenter{
-    position: absolute;
-    width: 10vw;
-    height: 0.3vh;
-    background-color: red;
+    z-index: 0;
+    position:absolute;
     margin: auto;
-    
+    height: 0.3vw;
 }
 
 .HourLine{
