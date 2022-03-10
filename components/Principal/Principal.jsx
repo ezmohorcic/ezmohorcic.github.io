@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import "./Principal.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { PrincipalLinkHover } from '../../redux/actions';
 
 const CShellVariants=
 {
@@ -26,9 +28,11 @@ const aHover={color:"#D4AF37"}
 
 export default function Principal()
 {
+    const linkHover = useSelector(state=> state.pLinkHover);
+    const dispatch = useDispatch();
+    
     return(
         <div id="principalContainer" >
-            
             <motion.div viewport={{once:true}} variants={CShellVariants} initial={"offScreen"} whileInView={"onScreen"} className='contDecoLineas'>
                 <div className='circuloDeco'></div>
                 <div className='LineaDeco'></div>
@@ -40,11 +44,11 @@ export default function Principal()
                 </div>
                 <div id="principalTituloCont"><motion.h2 viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} id='principalTitulo'>Desarrolladora Web - Full Stack</motion.h2></div>
                 <div id='linksPrincipalCont'>
-                    <motion.div whileHover={butHover} viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} className="principalShellExternos">
-                        <motion.a whileHover={aHover} target={"_blank"} href="https://linkedin.com/in/ivanna-mohorcic-94b96420a" className="principalLinksExternos">Linked-In</motion.a>
+                    <motion.div  whileHover={butHover} viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} className="principalShellExternos">
+                        <motion.a onMouseOver={()=>dispatch(PrincipalLinkHover())} onMouseLeave={()=>dispatch(PrincipalLinkHover())} whileHover={aHover} target={"_blank"} href="https://linkedin.com/in/ivanna-mohorcic-94b96420a" className="principalLinksExternos">Linked-In</motion.a>
                     </motion.div>
                     <motion.div whileHover={butHover} viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} className="principalShellExternos principalDerechaLink">
-                        <motion.a whileHover={aHover} target={"_blank"} href="https://github.com/ezmohorcic" className="principalLinksExternos">GitHub</motion.a>
+                        <motion.a onMouseOver={()=>dispatch(PrincipalLinkHover())} onMouseLeave={()=>dispatch(PrincipalLinkHover())} whileHover={aHover} target={"_blank"} href="https://github.com/ezmohorcic" className="principalLinksExternos">GitHub</motion.a>
                     </motion.div>
                 </div>
             </motion.div>

@@ -24,24 +24,10 @@ export default function App()
     {
       if(e.deltaY>0)
       {
-        raw=document.documentElement.clientHeight*(0.2);
+        raw=document.documentElement.clientHeight;
         window.scrollTo(0,raw) 
       }
     } 
-    else if(scroll==document.documentElement.clientHeight*(0.2))
-    {
-      console.log(e.deltaY>0)
-      if(e.deltaY>0)
-      {
-        raw=document.documentElement.clientHeight*(1.2)
-        window.scrollTo(0,raw)
-      }
-      else
-      {
-        raw=0;
-        window.scrollTo(0,raw);
-      }
-    }
     else
     {
       console.log(e.deltaY>0)
@@ -52,16 +38,8 @@ export default function App()
       }
       else
       {
-        if(scroll==document.documentElement.clientHeight*(1.2))
-        {
-          raw=0;
-          window.scrollTo(0,raw);
-        }
-        else
-        {
-          raw = scroll - document.documentElement.clientHeight;
-          window.scrollTo(0,raw)
-        }
+        raw = scroll - document.documentElement.clientHeight;
+        window.scrollTo(0,raw)
       }
     }
     setScroll(raw)
