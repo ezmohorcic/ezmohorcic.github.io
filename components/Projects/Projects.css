@@ -8,11 +8,14 @@
     width: 76vw;
     height: fit-content;
     margin: auto;
-
     font-size: 2vw;
 
     background-color: black;
     z-index: 1;
+
+
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 #projectTitleCont{
     position: relative;
@@ -20,8 +23,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
     width: 50vw;
     height: 100vh;
+
     background-color: black;
 
     z-index: 1;
@@ -36,7 +41,83 @@
     border-right: solid white 0.2vw;
     border-left: solid white 0.2vw;
     border-radius: 1.5vw;
+    box-shadow: inset 0 0 0.8vw 0.05vw white;
+    background-color: rgba(30, 30, 30, 0.4);
+    clip-path: inset(1vw 0 1vw 0);
 
     color: white;
-    background-color: black;
+}
+
+
+#projectsBckg{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    
+}
+
+#projectsMovBackground{
+    position: relative;
+    top: -5vh;
+
+    height: 3vh;
+    width: 80vw;
+
+    z-index: 0;
+
+    /* background: linear-gradient(90deg, rgba(212,175,55,0.6) 2%, rgba(255,215,0,0.6) 5%, rgba(255,215,0,0.6) 95%, rgba(212,175,55,0.6) 98%); */
+    background-color:rgba(255,215,0,1);
+    box-shadow:  0 0 1vw 1vw rgba(255,215,0,1);
+
+    border-radius: 1vw;
+}
+
+#ProjectCentralBckg{
+    position: relative;
+    display: grid;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+
+    grid-template-columns: 80vw;
+    grid-template-rows: fit-content;
+
+    width: 80vw;
+    margin: auto;
+
+    background-color: transparent;
+}
+
+#projectsanimatedBorderRight,#projectsanimatedBorderLeft{
+    position: relative;
+    height: 200vh;
+    width: 2vw;
+    background-color: rgba(255,215,0,1);
+
+    z-index: 1;
+}
+
+
+#projectsanimatedBorderRight{
+    box-shadow: 1.5vw 0 0.5vw rgba(255,215,0,1);
+}
+
+#projectsanimatedBorderLeft{
+    box-shadow: -1.5vw 0 0vw rgba(255,215,0,1);
+}
+
+#backProjectCont{
+    width: 76vw;
+    height: 198vh;
+    margin: auto;
+    
+    box-shadow:  0 0 2vw 0.3vw #D4AF37;
+    background-color: rgba(30, 30, 30, 0.4);
+    grid-column: 1/2;
+    grid-row: 1/2;
 }

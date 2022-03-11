@@ -53,7 +53,6 @@ export default function BackgroundPrincipal()
     },[linkHover]);
     return(
         <div id='contBackgroundPrincipal' >
-            {console.log(linkHover,cycle)}
             {/* <motion.div  style={HourLineStyle} initial={"falseAn"} animate={animationHourLine[0]} transition={transitionHourLine}  className='HourLine'></motion.div>
             <motion.div  style={HourLineStyle} initial={"falseAn"} animate={animationHourLine[1]} transition={transitionHourLine}  className='HourLine'></motion.div>
             <motion.div  style={HourLineStyle} initial={"falseAn"} animate={animationHourLine[2]} transition={transitionHourLine}  className='HourLine'></motion.div>
