@@ -42,7 +42,7 @@ export default function Principal()
                 <div  id="principalNameCont">
                     <motion.h1 viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} id='principalNombre'>Ivanna Minerva Mohorcic</motion.h1>
                 </div>
-                <div id="principalTituloCont"><motion.h2 viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} id='principalTitulo'>Desarrolladora Web - Full Stack</motion.h2></div>
+                <div id="principalTituloCont"><motion.h2 viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} id='principalTitulo'>Web Developer - Full Stack</motion.h2></div>
                 <div id='linksPrincipalCont'>
                     <motion.div  whileHover={butHover} viewport={{once:true}} variants={pVariants} initial={"offScreen"} whileInView={"onScreen"} className="principalShellExternos">
                         <motion.a onMouseOver={()=>dispatch(PrincipalLinkHover())} onMouseLeave={()=>dispatch(PrincipalLinkHover())} whileHover={aHover} target={"_blank"} href="https://linkedin.com/in/ivanna-mohorcic-94b96420a" className="principalLinksExternos">Linked-In</motion.a>

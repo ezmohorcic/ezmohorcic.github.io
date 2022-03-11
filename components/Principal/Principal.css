@@ -86,7 +86,7 @@
 .circuloDeco{
     width: 0.2vw;
     height: 0.2vw;
-    border: 0.2vw solid white;
+    border: 0.15vw solid white;
     
     transform: rotate(45deg);
 }

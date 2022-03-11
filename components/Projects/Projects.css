@@ -17,6 +17,7 @@
 #projectTitleCont{
     position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 50vw;
@@ -26,10 +27,16 @@
     z-index: 1;
 }
 #projectsTitle{
+    height: fit-content;
+    padding: 3vw;
+    
     text-align: center;
     font-size: 3em;
-    margin-top: 5vh;
-    margin-bottom: 10vh;
+
+    border-right: solid white 0.2vw;
+    border-left: solid white 0.2vw;
+    border-radius: 1.5vw;
+
     color: white;
     background-color: black;
 }

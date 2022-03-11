@@ -26,7 +26,7 @@ const animationHourLine=
 
 const transitionMinuteLine=
 {
-    duration:15,
+    duration:10,
     repeat: Infinity,
     ease:[0.5,0.5,0.5,0.5]
 }
