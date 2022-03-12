@@ -10,7 +10,6 @@ html {
     scroll-behavior: smooth;
   }
 
-
 #principalApp{
     display: grid;
     grid-template-columns: 98vw;
@@ -18,4 +17,46 @@ html {
 
     width: 98vw;
     height: 100vh;
+}
+
+#projectsAll{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+
+    background-color: transparent;
+}   
+
+.projectSidesCont{
+    display: flex;
+    justify-content: space-evenly;
+    width: 10vw;
+
+    overflow: hidden;
+}
+
+.projectSidesLine{
+    position: relative;
+    
+}
+
+.sidesLine{
+    position: relative;
+    width: 0.5vw;
+    height: 18vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+#leftOut >.sidesLine{
+    background-color: rgb(20, 20, 20);
+}
+#leftIn >.sidesLine{
+    background: linear-gradient(90deg, rgba(30,30,30,1) 40%, rgba(82,70,28,1) 100%);
+}
+#rightIn >.sidesLine{
+    background: linear-gradient(90deg, rgba(82,70,28,1) 0%, rgba(30,30,30,1) 90%);
+}
+#rightOut >.sidesLine{
+    background-color: rgb(20, 20, 20);
 }

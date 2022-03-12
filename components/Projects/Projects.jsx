@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Project from './Project/Project.jsx';
 import { motion, useCycle } from 'framer-motion';
 
-import { info_SecretH } from '../../redux/const.js';
+import { cant_projects, info_SecretH } from '../../redux/const.js';
 import './Projects.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { firstScrollAction } from '../../redux/actions.js';
@@ -47,7 +47,7 @@ const bckgMovVariants=
 const bckgTimes=[0,1.1,0.6,0.4,0.3,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2]
 
 const animatedBorderVariants={
-    offScreen:{opacity:0.1},
+    offScreen:{opacity:0.1,height:((cant_projects+1)*document.documentElement.clientHeight)-(document.documentElement.clientHeight*0.06)},
     onScreen:{opacity:1,transition:{delay:2,ease:"easeIn",duration:2.2}}
 }
 /*animaciones de inicio de border*/

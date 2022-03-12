@@ -1,25 +1,39 @@
 import React, { Fragment,useEffect,useState } from 'react';
-import { Provider, useDispatch } from 'react-redux';
-import store from './redux/store.js'
+import { Provider, useDispatch, useSelector } from 'react-redux';
+import { motion } from 'framer-motion';
+
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Principal from './components/Principal/Principal.jsx';
 import Projects from './components/Projects/Projects.jsx';
-
-import "./App.css"
+import store from './redux/store.js'
 import BackgroundPrincipal from './components/Principal/BackgroundPrincipal.jsx';
 import { firstScrollAction } from './redux/actions.js';
 import { cant_projects } from './redux/const.js';
 
-function handleScroll()
-{
-  const y_axis = window.scrollY
-  console.log("scroll",y_axis)
+import "./App.css";
+
+
+const sideLinesUpVariants={
+  top:[0,-(document.documentElement.clientHeight*(cant_projects+1))],
+  transition:{duration:20,ease:[0.5,0.5,0.5,0.5],repeat:Infinity}
+}
+
+const sideLinesDownVariants={
+  top:[-document.documentElement.clientHeight*(cant_projects+1),0],
+  transition:{duration:20,ease:[0.5,0.5,0.5,0.5],repeat:Infinity}
+}
+
+const sidesLineContVariants={
+  offScreen:{opacity:0.1},
+  onScreen:{opacity:1,transition:{delay:2,ease:"easeIn",duration:2.2}}
 }
 
 export default function App()
 {
   const [scroll,setScroll]=useState(0);
-  const dispatch = useDispatch()
+  const firstScroll = useSelector(state=>state.firstScroll);
+  const dispatch = useDispatch();
+
   function handleScroll(e)
   {
     let raw=0;
@@ -49,6 +63,18 @@ export default function App()
     }
     setScroll(raw)
   }
+
+  function createUpLines()
+  {
+    let lines=[];
+
+    for(let i=0;i<(cant_projects+1)*10;i++)
+    {
+      lines.push(<div key={"lineSide_"+i} className='sidesLine'></div>)
+    }
+
+    return lines;
+  }
   
   return(
       <div id='appAll' onWheel={(e)=>handleScroll(e)}>
@@ -56,7 +82,17 @@ export default function App()
           <BackgroundPrincipal/>
           <Principal/>
         </div>
-        <Projects/>
+        <div id="projectsAll">
+          <motion.div variants={sidesLineContVariants} animate={firstScroll? "onScreen" : "offScreen"} className='projectSidesCont'>
+            <motion.div animate={sideLinesUpVariants} style={{height:document.documentElement.clientHeight*(cant_projects+1)}} id="leftOut" className='projectSidesLine'>{createUpLines()}</motion.div>
+            <motion.div animate={sideLinesDownVariants} style={{height:document.documentElement.clientHeight*(cant_projects+1)}} id="leftIn" className='projectSidesLine'>{createUpLines()}</motion.div>
+          </motion.div>
+          <Projects/>
+          <motion.div variants={sidesLineContVariants} animate={firstScroll? "onScreen" : "offScreen"} className='projectSidesCont'>
+            <motion.div animate={sideLinesDownVariants} style={{height:document.documentElement.clientHeight*(cant_projects+1)}} id="rightIn" className='projectSidesLine'>{createUpLines()}</motion.div>
+            <motion.div animate={sideLinesUpVariants} style={{height:document.documentElement.clientHeight*(cant_projects+1)}} id="rightOut" className='projectSidesLine'>{createUpLines()}</motion.div>
+          </motion.div>
+        </div>      
       </div>     
   )
 }
