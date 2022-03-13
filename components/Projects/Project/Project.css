@@ -26,16 +26,43 @@
 }
 
 .projectImgCont{
-    width: fit-content;
+    width: 40vw;
     overflow-y: hidden;
+
+    background: linear-gradient(0deg, rgba(10,20,133,0) 0%, rgba(10,20,133,0.2) 16%, rgba(0,0,0,0.4) 100%);
 }
 .projectImg{
     display: block;
+
     width: 40vw;
     height: auto;
+    margin: auto;
+
     border-radius: 1vw;
-    opacity:0.8;
-    box-shadow:inset 0 -4vh 3vw rgba(0, 0, 0, 0.2)
+    box-shadow:inset 0 -1vh 3vw rgba(0, 0, 0, 0.2);
+
+    opacity:0.7;
+    
+}
+.projectImgDecoCont{
+    display: flex;
+    justify-content: space-between;
+
+    height: 0.5vw;
+    width: 41.8vw;
+}
+.projectImgDeco{
+    position: relative;
+    width: 0.2vw;
+    height: 0.2vw;
+    border: 0.3vw solid white;
+}
+
+.imgDecoDown{
+    top: -1.1vw;
+}
+.imgDecoUp{
+    top: 0.8vw;
 }
 
 .projectAllCont{
