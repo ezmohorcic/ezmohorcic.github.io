@@ -5,19 +5,23 @@ import { useSelector } from 'react-redux';
 import './Project.css';
 
 const projectVariants={
-    offScreen:{rotateX:90},
-    onScreen:{rotateX:[90,0],transition:{duration:1.2,delay:0.5,ease:[0.5,0.5,0.5,0.5]}} 
+    offScreen:{rotateX:90,translateZ:200},
+    onScreen:{rotateX:[90,0],translateZ:[200,0],transition:{duration:1.2,delay:0.5,ease:[0.5,0.5,0.5,0.5]}} 
 }
 
+const projectTitleVariants={
+    offScreen:{},
+    onScreen:{color:["#ffffff","#d4af37","#ffffff"],transition:{duration:1,delay:3,ease:[0.5,0.5,0.5,0.5]}}
+}
 
 const imgTestCont={
     offScreen:{},
-    onScreen:{rotateX:[0,-10,-10,10,0],boxShadow: " inset 0 0 3vw 3vw rgba(255,255,255,1)",transition:{duration:0.7,delay:2.2,ease:[0.5,0.5,0.5,0.5]}}
+    onScreen:{rotateX:[-10,-20,-20,10,0],boxShadow: " inset 0 0 2vw 2vw rgba(255,255,255,1)",transition:{duration:0.8,delay:2.2,ease:[0.5,0.5,0.5,0.5]}}
 
 }
 const projectImgContVariants={
-    offScreen:{y:30},
-    onScreen:{y:[30,-30,-50,-30,0],transition:{duration:0.7,delay:2.2,ease:[0.5,0.5,0.5,0.5]}}
+    offScreen:{y:100},
+    onScreen:{y:["10vh","-5vh","-10vh","-3vh","0vh"],transition:{duration:0.7,delay:2.2,ease:[0.5,0.5,0.5,0.5]}}
 }
 
 const allContVariants={
@@ -36,7 +40,9 @@ export default function Project(props)
         
         <motion.div style={{perspective:500}} variants={projectVariants} initial={"offScreen"} animate={projectScroll? "onScreen" : "offScreen"} className="projectContainer">
             {console.log(projectScroll)}
-            <div className="projectTitleCont"><h1 className="projectTitle">{props.title}</h1></div>
+            <div className="projectTitleCont">
+                <motion.h1 variants={projectTitleVariants} initial={"offScreen"} animate={projectScroll? "onScreen" : "offScreen"} className="projectTitle">{props.title}</motion.h1>
+            </div>
             <motion.div  variants={imgTestCont} initial={"offScreen"} animate={projectScroll? "onScreen" : "offScreen"} className="projectImgCont">
                 <motion.img variants={projectImgContVariants} initial={"offScreen"} animate={projectScroll? "onScreen" : "offScreen"} src={props.img} className="projectImg" alt="Not-owo found :c" />
             </motion.div>
