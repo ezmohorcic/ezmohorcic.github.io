@@ -14,14 +14,14 @@ const projectTitleVariants={
     onScreen:{color:["#ffffff","#d4af37","#ffffff"],transition:{duration:1,delay:3,ease:[0.5,0.5,0.5,0.5]}}
 }
 
-const imgTestCont={
+const imgContVariants={
     offScreen:{},
     onScreen:{rotateX:[-10,-20,-20,10,0],boxShadow: " inset 0 0 2vw 2vw rgba(255,255,255,1)",transition:{duration:0.8,delay:2.2,ease:[0.5,0.5,0.5,0.5]}}
 
 }
 const projectImgContVariants={
     offScreen:{y:100},
-    onScreen:{y:["10vh","-5vh","-10vh","-3vh","0vh"],transition:{duration:0.7,delay:2.2,ease:[0.5,0.5,0.5,0.5]}}
+    onScreen:{y:["10vh","-5vh","-10vh","-3vh","0vh"],transition:{duration:0.8,delay:2.2,ease:[0.5,0.5,0.5,0.5]}}
 }
 
 const allContVariants={
@@ -43,8 +43,8 @@ export default function Project(props)
             <div className="projectTitleCont">
                 <motion.h1 variants={projectTitleVariants} initial={"offScreen"} animate={projectScroll? "onScreen" : "offScreen"} className="projectTitle">{props.title}</motion.h1>
             </div>
-            <motion.div  variants={imgTestCont} initial={"offScreen"} animate={projectScroll? "onScreen" : "offScreen"} className="projectImgCont">
-                <motion.img variants={projectImgContVariants} initial={"offScreen"} animate={projectScroll? "onScreen" : "offScreen"} src={props.img} className="projectImg" alt="Not-owo found :c" />
+            <motion.div  variants={imgContVariants} initial={"offScreen"} animate={projectScroll? "onScreen" : "offScreen"} className="projectImgCont">
+                <motion.img variants={projectImgContVariants} initial={"offScreen"} animate={projectScroll? "onScreen" : "offScreen"} src={props.img} className="projectImg" alt="Not-owo found :c" />  
             </motion.div>
             <motion.div variants={allContVariants} initial={"offScreen"} animate={projectScroll? "onScreen" : "offScreen"} className='projectAllCont'>
                 <div className="projectInfoCont">
