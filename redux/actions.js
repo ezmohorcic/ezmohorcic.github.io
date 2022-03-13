@@ -1,4 +1,4 @@
-import { DUMMY, FIRST_SCROLL, HOVER_CHANGE } from "./const";
+import { DUMMY, FIRST_SCROLL, HOVER_CHANGE, PROJECT_SCROLL } from "./const";
 
 export function dummy (payload)
 {
@@ -13,4 +13,9 @@ export function PrincipalLinkHover()
 export function firstScrollAction()
 {
     return({type:FIRST_SCROLL})
+}
+
+export function showProject()
+{
+    return({type:PROJECT_SCROLL})
 }

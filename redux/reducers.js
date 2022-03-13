@@ -1,5 +1,5 @@
 import { combineReducers } from "redux"
-import { DUMMY, FIRST_SCROLL, HOVER_CHANGE } from "./const"
+import { DUMMY, FIRST_SCROLL, HOVER_CHANGE, PROJECT_SCROLL } from "./const"
 
 function dummy(state=DUMMY,action)
 {
@@ -27,11 +27,17 @@ function firstScroll(state=0,action)
     }
     else return state;
 }
+function projectScroll(state=false,action)
+{
+    if(action.type===PROJECT_SCROLL){return true;}
+    else return state;
+}
 const rootReducer=combineReducers(
 {
     dummy,
     pLinkHover,
     firstScroll,
+    projectScroll,
 });
 
 export default rootReducer;

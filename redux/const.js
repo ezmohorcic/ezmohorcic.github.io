@@ -17,7 +17,9 @@ export const HOVER_CHANGE="HOVER_CHANGE";
 
 /*scroll desde carta principal */
 
-export const FIRST_SCROLL="FIRST_SCROLL"
+export const FIRST_SCROLL="FIRST_SCROLL";
+
+export const PROJECT_SCROLL="PROJECT_SCROLL";
 
 /*scroll desde carta principal */
 

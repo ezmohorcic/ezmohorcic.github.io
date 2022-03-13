@@ -7,7 +7,7 @@ import Principal from './components/Principal/Principal.jsx';
 import Projects from './components/Projects/Projects.jsx';
 import store from './redux/store.js'
 import BackgroundPrincipal from './components/Principal/BackgroundPrincipal.jsx';
-import { firstScrollAction } from './redux/actions.js';
+import { firstScrollAction, showProject } from './redux/actions.js';
 import { cant_projects } from './redux/const.js';
 
 import "./App.css";
@@ -50,10 +50,11 @@ export default function App()
     {
       if(e.deltaY>0)
       {
-        console.log(scroll/document.documentElement.clientHeight<cant_projects+1)
         if(scroll/document.documentElement.clientHeight<cant_projects+1){raw=scroll + document.documentElement.clientHeight;}
         else {raw = scroll;}
         window.scrollTo(0,raw);
+        console.log(scroll/document.documentElement.clientHeight==1,scroll/document.documentElement.clientHeight)
+        if(scroll/document.documentElement.clientHeight==1){dispatch(showProject());}
       }
       else
       {
