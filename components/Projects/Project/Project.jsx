@@ -68,7 +68,7 @@ const allContVariants={
 export default function Project(props)
 {
     const projectScroll = useSelector(state=>state.projectScroll);
-    console.log(props.i)
+
     let projbuttons=[];
     if(props.github){projbuttons.push(<div key={"git-but-"+props.i} className='projectLinkCont'><a className='projectLink' target={"_blank"} href={props.github}>GitHub</a></div>)}
     if(props.deploy){projbuttons.push(<div key={"deploy-but-"+props.i} className='projectLinkCont'><a className='projectLink' target={"_blank"} href={props.deploy}>Abrir</a></div>)}
