@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStore, applyMiddleware, compose } from "redux";
-// import store from "./redux/store.js"
+import rootReducer from "./redux/reducers.js"
 import ReactDOM from 'react-dom';
 import App from './app';
 import { Provider, useDispatch } from 'react-redux';
