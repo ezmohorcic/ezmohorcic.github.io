@@ -53,7 +53,6 @@ export default function App()
         if(scroll/document.documentElement.clientHeight<cant_projects+1){raw=scroll + document.documentElement.clientHeight;}
         else {raw = scroll;}
         window.scrollTo(0,raw);
-        console.log(scroll/document.documentElement.clientHeight==1,scroll/document.documentElement.clientHeight)
         if(scroll/document.documentElement.clientHeight==1){dispatch(showProject());}
       }
       else
