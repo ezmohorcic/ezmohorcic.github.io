@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Project from './Project/Project.jsx';
 import { motion, useCycle } from 'framer-motion';
 
-import { cant_projects, info_SecretH } from '../../redux/const.js';
+import { cant_projects, info_PF_ProtocolMoon, info_PI_videogames, info_SecretH } from '../../redux/const.js';
 import './Projects.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { firstScrollAction } from '../../redux/actions.js';
@@ -90,6 +90,8 @@ export default function Projects()
                     </div>
 
                     <Project i={0} info={info_SecretH} title={"Secret H Demo"} img={"./public/secret-h-img.png"} github={"https://github.com/ezmohorcic/secret-h-demo"} deploy={"https://secret-h-demo-v2-h65pv.ondigitalocean.app/"}/>  
+                    <Project i={1} info={info_PI_videogames} title={"PF - Videogames"} img={"./public/PI-videogames-img.jpeg"} github={"https://github.com/ezmohorcic/PI-Videogames-main"} deploy={""}/>  
+                    <Project i={2} info={info_PF_ProtocolMoon} title={"Protocol Moon"} img={"./public/PF-protocol-Moon-img.png"} github={"https://github.com/ezmohorcic/PF-Project-Moon"} deploy={"https://projectmoon.vercel.app/home"}/>  
                     {/* <Project i={1} info={info_SecretH} title={"Secret H Demo"} img={"./public/secret-h-img.png"} github={"https://github.com/ezmohorcic/secret-h-demo"} deploy={"https://secret-h-demo-v2-h65pv.ondigitalocean.app/"}/> */}   
                 </motion.div>
 
