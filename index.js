@@ -1,5 +1,5 @@
 import React from 'react';
-import store from './redux/store.js'
+import store from "./redux/store.js"
 import ReactDOM from 'react-dom';
 import App from './app';
 import { Provider, useDispatch } from 'react-redux';

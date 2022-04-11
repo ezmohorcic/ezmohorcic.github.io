@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Principal from './components/Principal/Principal.jsx';
 import Projects from './components/Projects/Projects.jsx';
-import store from './redux/store.js'
 import BackgroundPrincipal from './components/Principal/BackgroundPrincipal.jsx';
 import { firstScrollAction, showProject } from './redux/actions.js';
 import { cant_projects } from './redux/const.js';
