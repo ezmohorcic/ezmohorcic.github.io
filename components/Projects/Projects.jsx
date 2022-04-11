@@ -90,7 +90,7 @@ export default function Projects()
                     </div>
 
                     <Project i={0} info={info_SecretH} title={"Secret H Demo"} img={"./public/secret-h-img.png"} github={"https://github.com/ezmohorcic/secret-h-demo"} deploy={"https://secret-h-demo-v2-h65pv.ondigitalocean.app/"}/>  
-                    <Project i={1} info={info_PI_videogames} title={"PF - Videogames"} img={"./public/PI-videogames-img.jpeg"} github={"https://github.com/ezmohorcic/PI-Videogames-main"} deploy={""}/>  
+                    <Project i={1} info={info_PI_videogames} title={"PI - Videogames"} img={"./public/PI-videogames-img.jpeg"} github={"https://github.com/ezmohorcic/PI-Videogames-main"} deploy={""}/>  
                     <Project i={2} info={info_PF_ProtocolMoon} title={"Protocol Moon"} img={"./public/PF-protocol-Moon-img.png"} github={"https://github.com/ezmohorcic/PF-Project-Moon"} deploy={"https://projectmoon.vercel.app/home"}/>  
                     {/* <Project i={1} info={info_SecretH} title={"Secret H Demo"} img={"./public/secret-h-img.png"} github={"https://github.com/ezmohorcic/secret-h-demo"} deploy={"https://secret-h-demo-v2-h65pv.ondigitalocean.app/"}/> */}   
                 </motion.div>
