@@ -30,10 +30,10 @@ const bckgArr=["offScreen","el1","el2","el3","el4","el5","el6","el7","el8","el9"
 const bckgMovVariants=
 {
     offScreen:{transition:{duration:0.6}},
-    el1:{top:[-35,-3000],transition:{duration:2.2,ease:"easeIn"}},
-    el2:{top:[-35,-3000],transition:{duration:1.2,ease:"easeIn"}},
-    el3:{top:[-35,-3000],transition:{duration:0.8,ease:"easeIn"}},
-    el4:{top:[-35,-3000],transition:{duration:0.6,ease:"easeIn"}},
+    el1:{top:[-35,-5000],transition:{duration:2.2,ease:"easeIn"}},
+    el2:{top:[-35,-5000],transition:{duration:1.2,ease:"easeIn"}},
+    el3:{top:[-35,-5000],transition:{duration:0.8,ease:"easeIn"}},
+    el4:{top:[-35,-5000],transition:{duration:0.6,ease:"easeIn"}},
     el5:{top:[-35,-3000],transition:{duration:0.4,ease:"easeIn"}},
     el6:{top:[-35,-3000],transition:{duration:0.4,ease:"easeIn"}},
     el7:{top:[-35,-3000],transition:{duration:0.4,ease:"easeIn"}},

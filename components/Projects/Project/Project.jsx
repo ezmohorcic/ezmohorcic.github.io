@@ -71,7 +71,7 @@ export default function Project(props)
 
     let projbuttons=[];
     if(props.github){projbuttons.push(<div key={"git-but-"+props.i} className='projectLinkCont'><a className='projectLink' target={"_blank"} href={props.github}>GitHub</a></div>)}
-    if(props.deploy){projbuttons.push(<div key={"deploy-but-"+props.i} className='projectLinkCont'><a className='projectLink' target={"_blank"} href={props.deploy}>Abrir</a></div>)}
+    if(props.deploy){projbuttons.push(<div key={"deploy-but-"+props.i} className='projectLinkCont'><a className='projectLink' target={"_blank"} href={props.deploy}>Open</a></div>)}
     return(
         
         <motion.div style={{perspective:500}} variants={projectVariants} initial={"offScreen"} animate={projectScroll? "onScreen" : "offScreen"} className="projectContainer">
