@@ -44,7 +44,7 @@ const bckgMovVariants=
     el12:{top:[-35,-7000],transition:{duration:0.4,ease:"easeIn"}},
     el13:{opacity:0,height:0},
 }
-const bckgTimes=[0,1.1,0.6,0.4,0.3,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2]
+const bckgTimes=[0,2.2,1.2,0.8,0.6,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4]
 
 const animatedBorderVariants={
     offScreen:{opacity:0.1,height:((cant_projects+1)*document.documentElement.clientHeight)-(document.documentElement.clientHeight*0.06)},
