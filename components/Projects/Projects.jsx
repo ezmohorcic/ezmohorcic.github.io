@@ -30,21 +30,21 @@ const bckgArr=["offScreen","el1","el2","el3","el4","el5","el6","el7","el8","el9"
 const bckgMovVariants=
 {
     offScreen:{transition:{duration:0.6}},
-    el1:{top:[-35,-7000],transition:{duration:2.2,ease:"easeIn"}},
-    el2:{top:[-35,-7000],transition:{duration:1.2,ease:"easeIn"}},
-    el3:{top:[-35,-7000],transition:{duration:0.8,ease:"easeIn"}},
-    el4:{top:[-35,-7000],transition:{duration:0.6,ease:"easeIn"}},
-    el5:{top:[-35,-7000],transition:{duration:0.4,ease:"easeIn"}},
-    el6:{top:[-35,-7000],transition:{duration:0.4,ease:"easeIn"}},
-    el7:{top:[-35,-7000],transition:{duration:0.4,ease:"easeIn"}},
-    el8:{top:[-35,-7000],transition:{duration:0.4,ease:"easeIn"}},
-    el9:{top:[-35,-7000],transition:{duration:0.4,ease:"easeIn"}},
-    el10:{top:[-35,-7000],transition:{duration:0.4,ease:"easeIn"}},
-    el11:{top:[-35,-7000],transition:{duration:0.4,ease:"easeIn"}},
-    el12:{top:[-35,-7000],transition:{duration:0.4,ease:"easeIn"}},
+    el1:{top:[-35,-7000],transition:{duration:1.1,ease:"easeIn"}},
+    el2:{top:[-35,-7000],transition:{duration:0.6,ease:"easeIn"}},
+    el3:{top:[-35,-7000],transition:{duration:0.4,ease:"easeIn"}},
+    el4:{top:[-35,-7000],transition:{duration:0.3,ease:"easeIn"}},
+    el5:{top:[-35,-7000],transition:{duration:0.2,ease:"easeIn"}},
+    el6:{top:[-35,-7000],transition:{duration:0.2,ease:"easeIn"}},
+    el7:{top:[-35,-7000],transition:{duration:0.2,ease:"easeIn"}},
+    el8:{top:[-35,-7000],transition:{duration:0.2,ease:"easeIn"}},
+    el9:{top:[-35,-7000],transition:{duration:0.2,ease:"easeIn"}},
+    el10:{top:[-35,-7000],transition:{duration:0.2,ease:"easeIn"}},
+    el11:{top:[-35,-7000],transition:{duration:0.2,ease:"easeIn"}},
+    el12:{top:[-35,-7000],transition:{duration:0.2,ease:"easeIn"}},
     el13:{opacity:0,height:0},
 }
-const bckgTimes=[0,2.2,1.2,0.8,0.6,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4]
+const bckgTimes=[0,1.1,0.6,0.4,0.3,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2]
 
 const animatedBorderVariants={
     offScreen:{opacity:0.1,height:((cant_projects+1)*document.documentElement.clientHeight)-(document.documentElement.clientHeight*0.06)},
