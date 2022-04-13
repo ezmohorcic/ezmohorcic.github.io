@@ -29,7 +29,7 @@ const pVariants=
 const bckgArr=["offScreen","el1","el2","el3","el4","el5","el6","el7","el8","el9","el9","el10","el11","el12","el13",];
 const bckgMovVariants=
 {
-    offScreen:{transition:{duration:0.6}},
+    offScreen:{top:-7000,transition:{duration:0.6}},
     el1:{top:[-35,-7000],transition:{duration:2.2,ease:"easeIn"}},
     el2:{top:[-35,-7000],transition:{duration:1.2,ease:"easeIn"}},
     el3:{top:[-35,-7000],transition:{duration:0.8,ease:"easeIn"}},
